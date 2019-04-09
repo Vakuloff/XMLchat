@@ -2,7 +2,6 @@
 <chatwindow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="conversation.xsd">
 	<chatroom id="chatroom_1">
 		<chatroom_name>Assignment-1-XML</chatroom_name>
-		<messages>
-		<message message_id="1"><name>Mykyta Vakulov</name><content>sadfasdf</content><messageTime> 09th April 2019 03:04:50 AM</messageTime></message></messages>
+		<messages><message message_id="1"><name>Axel</name><content>first message</content><messageTime> 09th April 2019 03:04:11 AM</messageTime></message></messages>
 	</chatroom>
 </chatwindow>

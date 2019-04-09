@@ -1,5 +1,6 @@
 <?php 
-	$name = $_POST['name'];
+session_start();
+	$name = $_SESSION['nickname'];
 	$content = $_POST['content'];
 	$date = date(" dS F Y h:m:s A");
 
