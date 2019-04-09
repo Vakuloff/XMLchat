@@ -1,4 +1,7 @@
 <?php 
+if($_SESSION['nickname'] == '' || $_SESSION['nickname'] == null){
+	header("Location: index.php");
+}
 session_start();
 	$chatTitle= $_GET['chatTitle'];
 	$name = $_SESSION['nickname'];
