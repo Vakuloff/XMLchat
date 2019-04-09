@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chatwindow>
+	<chatroom id="chatroom_1">
+		<chatroom_name>JS-team</chatroom_name>
+		<messages>
+			<message message_id="1">
+				<name>Morgan</name>
+				<content>First JS message</content>
+				<messageTime> 09th April 2019 04:04:12 AM</messageTime>
+			</message>
+		</messages>
+	</chatroom>
+</chatwindow>

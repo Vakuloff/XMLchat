@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chatwindow>
+	<chatroom id="chatroom_1">
+		<chatroom_name>Assignment-1-XML</chatroom_name>
+		<messages>
+			<message message_id="1">
+				<name>Morgan</name>
+				<content>First XML message</content>
+				<messageTime> 09th April 2019 05:04:22 AM</messageTime>
+			</message>
+	</messages>
+	</chatroom>
+</chatwindow>

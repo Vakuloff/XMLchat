@@ -1,10 +1,12 @@
 <?php 
 session_start();
+	$chatTitle= $_GET['chatTitle'];
 	$name = $_SESSION['nickname'];
 	$content = $_POST['content'];
 	$date = date(" dS F Y h:m:s A");
 
-	$xml = simplexml_load_file("XML-chat.xml");
+	$xmlPath = 'XML/' . $chatTitle . '.xml';
+	$xml = simplexml_load_file($xmlPath);
 	$messages = array();
 	$messages = $xml->chatroom->messages->message;
 	$numberMessages = count($messages);
@@ -15,6 +17,5 @@ session_start();
 	$newMessageUsername = $newMessage->addChild('name', $name);
 	$newMessageContent = $newMessage->addChild('content', $content);
 	$newMessageDate = $newMessage->addChild('messageTime', $date);
-	$xml->saveXML("XML-chat.xml");
-	
+	$xml->saveXML('XML/' . $chatTitle . '.xml');
 ?>

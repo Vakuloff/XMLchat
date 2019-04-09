@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chatwindow>
+	<chatroom id="chatroom_1">
+		<chatroom_name>PHP-team</chatroom_name>
+		<messages><message message_id="1">
+			<name>Morgan</name>
+			<content>PHP first message</content>
+			<messageTime> 09th April 2019 04:04:44 AM</messageTime>
+		</message>
+	</messages>
+	</chatroom>
+</chatwindow>

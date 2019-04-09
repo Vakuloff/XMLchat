@@ -1,6 +1,6 @@
 <?php 
-
-$xml = simplexml_load_file("XML-chat.xml");
+$chatTitle = $_GET['chatTitle'];
+$xml = simplexml_load_file($xmlPath = 'XML/' . $chatTitle . '.xml');
 
 $messages = array();
 $messages = $xml->chatroom->messages->message;
@@ -11,8 +11,6 @@ for ($i=0; $i < $numberMessages; $i++) {
 	$messages[$i]['content'] = $messages[$i]->content;
 	$messages[$i]['messageTime'] = $messages[$i]->messageTime;
 	
-
-
 	echo "<li class='username'>" . $messages[$i]['name'] . "</li>";
 	echo "<li>" . $messages[$i]['content'] . "</li>";
 	echo "<li>" . $messages[$i]['messageTime'] . "</li>";

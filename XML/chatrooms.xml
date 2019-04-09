@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chatrooms_window>
+	<chatrooms chatroom_id="4">
+		<chatroom chatroom_id="1">
+		<name>Assignment-1-XML</name>
+		</chatroom>
+	<chatroom chatroom_id="2">
+		<name>PHP-team</name>
+	</chatroom>
+	<chatroom chatroom_id="3">
+		<name>JS-team</name>
+	</chatroom>
+<chatroom chatroom_id="4"><name>ASP.NET</name></chatroom></chatrooms>
+</chatrooms_window>

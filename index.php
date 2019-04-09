@@ -3,7 +3,7 @@ session_start();
 if(isset($_POST['addNickname'])){
 	$nickname = $_POST['nickname'];
 	$_SESSION['nickname'] = $nickname;
-	header("Location: chat.php");
+	header("Location: chatrooms.php");
 }
 if(isset($_POST['logout'])){
 	session_unset(); 

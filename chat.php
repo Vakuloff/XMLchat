@@ -8,7 +8,9 @@ if(isset($_POST['logout'])){
 	session_destroy();
 	header("Location: index.php");
 }
-echo $_SESSION['nickname'];
+$chatTitle = $_GET['chatTitle'];
+echo $chatTitle;
+json_encode($chatTitle);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,8 +24,8 @@ echo $_SESSION['nickname'];
 </head>
 <body>
 	<form action="" method="POST" id="ajaxForm">
-		<input type="text" name="content" id="content"/>
-		<button type="submit" id="button">Button</button>
+		<textarea name="content" id="content" cols="30" rows="10"></textarea><br>
+		<button type="submit" id="button">Send message</button>
 	</form>
 	<form action="" method="POST">
 		<input type="submit" name="logout" value="logout">
@@ -31,13 +33,15 @@ echo $_SESSION['nickname'];
 	<div id="messages"></div>
 	<script>
 		$(document).ready(function(){
+			var chatTitle = <?php echo json_encode($chatTitle); ?>;
+			console.log(chatTitle);
 			//-----------------------------------------------
 			$('#ajaxForm').on('submit', function (event){
 				event.preventDefault();
 				var content = $('#content').val();
 				$.ajax({
 					type: 'POST',
-					url: 'func.php',
+					url: 'func.php?chatTitle=' + chatTitle,
 					data: {content: content},
 				});
 				$('#ajaxForm')[0].reset();
@@ -45,7 +49,7 @@ echo $_SESSION['nickname'];
 			// -------------------------------------------
 			setInterval(function(){
 				$.ajax({
-					url: 'getMessages.php',
+					url: 'getMessages.php?chatTitle=' + chatTitle,
 					success: function(data){
 						$('#messages').html(data);
 					}
